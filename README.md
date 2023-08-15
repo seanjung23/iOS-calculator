@@ -1,2 +1,2 @@
 # iOS-calculator
-iOS calculator clone
+iOS calculator clone with basic integer operation.
