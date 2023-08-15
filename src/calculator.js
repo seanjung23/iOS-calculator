@@ -7,47 +7,39 @@ let currentNumber = "";
 let operator = null;
 
 const buttonClick = (value) => {
-  // if (currentNumber.length === 0) {
-  //   currentNumber = "0";
-  //   if (operations.includes(value)) {
-  //     if (operator !== null) {
-  //       calculate(value);
-  //       return;
-  //     }
-  //     operator = value;
-  //     runningTotal = parseInt(currentNumber);
-  //     currentNumber = "";
-  //     screen.innerText = 0
-  //   } else {
-  //     currentNumber += value;
-  //     screen.innerText = currentNumber;
-  //   }
-  // }
   if (value === operations[0]) {
     runningTotal = 0;
     currentNumber = "";
     operator = null;
-    screen.innerText = 0
+    screen.innerText = 0;
   } else if (value === operations[1]) {
     if (currentNumber.length === 1) {
       currentNumber = "";
       screen.innerText = 0;
+
       return;
     }
+
     currentNumber = currentNumber.slice(0, -1);
     screen.innerText = currentNumber;
-  } else if (value === operations[6] && runningTotal > 0) {
+  } else if (value === operations[6]) {
     calculate(value);
+
     screen.innerText = runningTotal;
   } else if (operations.includes(value)) {
+    if (currentNumber.length === 0) {
+      currentNumber = "0";
+    }
     if (operator) {
       calculate(value);
+
       return;
     }
+
     operator = value;
     runningTotal = parseInt(currentNumber);
     currentNumber = "";
-    screen.innerText = 0
+    screen.innerText = 0;
   } else {
     currentNumber += value;
     screen.innerText = currentNumber;
@@ -64,6 +56,7 @@ const calculate = (value) => {
   } else if (operator === operations[5]) {
     runningTotal += parseInt(currentNumber);
   }
+
   operator = value;
   currentNumber = "";
   screen.innerText = 0;
