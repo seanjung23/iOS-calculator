@@ -1,6 +1,7 @@
 # iOS-calculator
 iOS calculator clone with basic integer operation.
 
+<img src="demo/calculator-demo.png" width="30%" height="50%">
+
 Click to watch the demo here:
-<img src="demo/calculator-demo.png" width="150" height="280">
-[![Calculator demo]( | width=100)](https://recordit.co/yHw0Rgnsof)
+![Calculator demo](https://recordit.co/yHw0Rgnsof)
